@@ -218,7 +218,6 @@ def load_weights(weight_file: str, model: Model, conv_index: int):
         conv_layer = model.get_layer(name="conv2d_" + str(index + 1))  # get conv layer by order.
         conv_weights = conv_layer.get_weights()  # get layer's weights
 
-    #
         try:
             bn_layer = model.get_layer(name="batch_normalization_" + str(index + 1))
             with_bn = True
